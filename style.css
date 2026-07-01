@@ -1,0 +1,25 @@
+:root{
+ /* Primary */
+--red400: hsl(0, 100%, 74%); 
+--green400: hsl(154, 59%, 51%);
+
+ /* Accent */
+--purple700: hsl(248, 32%, 49%);
+
+ /* Neutral */
+--gray900: hsl(249, 10%, 26%);
+--purple350: hsl(246, 25%, 77%);
+
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+ font-family: "Poppins", sans-serif;
+ font-size: 1rem;
+ background-image: url("images/bg-intro-desktop.png");
+}
