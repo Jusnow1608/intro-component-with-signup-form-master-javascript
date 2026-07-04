@@ -7,15 +7,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link rel="stylesheet" href="style.css" type = "text/css">
   <title>Frontend Mentor | Intro component with sign up form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 <div id="container">
 
@@ -29,13 +25,14 @@
 
   <main>
 
-    <article class="submission">
-         
-      <div class="costs">
-            <p class = "costs-details">Try it free 7 days then $20/mo. thereafter</p>
+    <div class="costs">
+            <p class = "costs-details"><span class = "duration">Try it free 7 days</span> then $20/mo. thereafter</p>
           </div>
-      
-          <form action="">
+
+    <article class="submission">
+
+      <form action="">
+
             <input type="text" name = "first-name" placeholder="First Name">
             <input type="text" name = "last-name" placeholder="Last Name ">
             <input type="email" name = "email" placeholder="Email Address">
@@ -45,9 +42,10 @@
 
       </form>
 
-          <p class = "terms">By clicking the button, you are agreeing to our Terms and Services</p>
+      <p class = "info">By clicking the button, you are agreeing to our <span class = "terms">Terms and Services</span></p>
 
     </article>
+
   </main>
 
 </div>
