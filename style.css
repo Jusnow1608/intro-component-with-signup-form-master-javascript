@@ -23,6 +23,9 @@
 
 /* Hover */
 --bg-green: hsl(154, 58%, 62%);
+
+/* Attribution */
+--attribution: hsl(228, 45%, 44%);
 }
 
 *, *::before, *::after{
@@ -44,20 +47,20 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px;
-  gap: 30px;  
+  padding: 0.9375rem;
+  gap: 1.875rem;  
 }
 
 .offer{
-  margin-top: 50px;
+  margin-block-start: 3.125rem;
   text-align: center;
-  max-width: 450px;
+  max-width: 28.125rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px;
-  gap: 20px;  
+  padding: 0.9375rem;
+  gap: 1.25rem;  
 }
 
 main{
@@ -65,22 +68,21 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px;
-  gap: 25px;
+  padding: 0.9375rem;
+  gap: 1.5625rem;
 }
 
 .costs{
   text-align: center;
   background-color: var(--purple700);
-  border-radius: 8px;
-  box-shadow: 0 8px 0 0 var(--costs-box-shadow);
-	-webkit-box-shadow: 0 8px 0 0 var(--costs-box-shadow);
-	-moz-box-shadow: 0 8px 0 0 var(--costs-box-shadow);
-  padding: 20px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 0 0 var(--costs-box-shadow);
+	-webkit-box-shadow: 0 0.5rem 0 0 var(--costs-box-shadow);
+	-moz-box-shadow: 0 0.5rem 0 0 var(--costs-box-shadow);
+  padding: 1.25rem;
   width: 100%;
-  max-width: 450px;
+  max-width: 28.125rem;
   font-weight: 400;
-  /* margin: 0 50px 0 50px; */
 }
 .duration{
   font-weight: 600;
@@ -88,36 +90,37 @@ main{
 
 .submission{
   background-color: var(--white);
-  border-radius: 8px;
-  box-shadow: 0 8px 0 0 var(--form-box-shadow);
-	-webkit-box-shadow: 0 8px 0 0 var(--form-box-shadow);
-	-moz-box-shadow: 0 8px 0 0 var(--form-box-shadow);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 0 0 var(--form-box-shadow);
+	-webkit-box-shadow: 0 0.5rem 0 0 var(--form-box-shadow);
+	-moz-box-shadow: 0 0.5rem 0 0 var(--form-box-shadow);
   width: 100%;
-  max-width: 450px;
+  max-width: 28.125rem;
 }
 
 
 form{
-  padding: 20px 20px 5px 20px;
+  padding-block: 1.25rem 0.3125rem;
+  padding-inline: 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
   width: 100%;
 }
 
 input{
   width:100%;
-  padding:15px;
-  border-radius: 5px;
-  border: 1px solid var(--input-border);
+  padding:0.9375rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid var(--input-border);
   font-weight: 600;
   font-size: 1rem;
 }
 
 input:focus {
-  border:1px solid var(--gray900);
+  border:0.0625rem solid var(--gray900);
 	color:var(--gray900);
   outline: none;
 }
@@ -125,17 +128,17 @@ input:focus {
 button{
   background-color: var(--green400);
   color: var(--white);
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   border: none;
-  box-shadow: 0 5px 0 0 var(--button-box-shadow-dark-green);
-	-webkit-box-shadow: 0 5px 0 0 var(--button-box-shadow-dark-g);
-	-moz-box-shadow: 0 5px 0 0 var(--button-box-shadow);
-  padding: 15px;
+  box-shadow: 0 0.3125rem 0 0 var(--button-box-shadow-dark-green);
+	-webkit-box-shadow: 0 0.3125rem 0 0 var(--button-box-shadow-dark-green);
+	-moz-box-shadow: 0 0.3125rem 0 0 var(--button-box-shadow-dark-green);
+  padding: 0.9375rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   width:100%;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 button:hover{
@@ -146,8 +149,9 @@ button:hover{
 .info{
   text-align: center;
   color: var(--purple350);
-  font-size: 12px;
-  padding: 0 20px 20px 20px;
+  font-size: 0.75rem;
+  padding-block: 0 1.25rem; 
+  padding-inline: 2rem;
   line-height: 2;
   font-weight: 500;
 }
@@ -162,5 +166,5 @@ button:hover{
 }
 
 .attribution a { 
-  color: hsl(228, 45%, 44%); 
+  color: var(--attribution); 
 }
