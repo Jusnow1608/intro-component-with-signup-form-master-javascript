@@ -36,7 +36,7 @@
 
 body{
  font-family: "Poppins", sans-serif;
- font-size: 1rem;
+ font-size: clamp(0.9375rem, 0.2vw + 0.85rem, 1rem);
  background-image: url("images/bg-intro-mobile.png");
  background-color: var(--red400);
  color: var(--white);
@@ -61,10 +61,16 @@ body{
   align-items: center;
   padding: 0.9375rem;
   gap: 1.25rem;  
+}
 
+.offer-title {
+  font-size: clamp(1.75rem, 4vw + 1rem, 3.4375rem);
+  line-height: 1.05;
+  margin-block-end: 1.5rem;
 }
 
 .offer-description{
+  font-size: clamp(1rem, 0.5vw + 0.9rem, 1.0625rem);
   line-height: 1.7;
 }
 
@@ -122,12 +128,21 @@ input{
   border: 0.0625rem solid var(--input-border);
   font-weight: 600;
   font-size: 1rem;
-}
+  }
 
 input:focus {
   border:0.0625rem solid var(--gray900);
 	color:var(--gray900);
   outline: none;
+  background-color: var(--white);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 62.5rem var(--white) inset;
+  box-shadow: 0 0 0 62.5rem var(--white) inset;
+  -webkit-text-fill-color: var(--gray900);
 }
 
 button{
@@ -143,7 +158,7 @@ button{
   letter-spacing: 0.0625rem;
   width:100%;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 0.5vw + 0.75rem, 1rem);
 }
 
 button:hover{
@@ -183,15 +198,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2.5rem;
+    padding-block: 2rem;
+    padding-inline: clamp(1rem, 8vw, 10rem);
   }
 
 #container {
   flex-direction: row;
   align-items: center;
-  max-width: 75rem;
+  max-width: 90rem;
   width: 100%;
-  gap: 4rem;
+  gap: 4.5rem;
+  justify-content: space-between;
 }
 
 .offer, main{
@@ -204,23 +221,50 @@ body {
   margin-block-start: 0;
   align-items: flex-start;
   max-width: none;
+  flex: 1;
+  padding: 0;
 }
 
-.offer-title{
-font-size: 3.125rem;
-line-height: 1.05;
+.offer-description{
+line-height: 1.8;
 }
+
+main {
+    flex: 1; 
+    width: 100%;
+    align-items: stretch;
+    padding: 0;
+    gap: 1.5rem;
+    min-width: 24rem;
+  }
+
 
 .costs, .submission {
-    max-width: 33.75rem; 
+    max-width: none; 
   }
 
 .costs {
   font-size: 1.0625rem;
+  padding-block: 1.0625rem;
 }
 
 form{
-  gap: 1.5rem;
+  padding-block: 2.5rem 1.25rem;
+  padding-inline: 2.5rem;        
+  gap: 1.25rem;
 }
 
+input {
+    padding: 1.0625rem 1.25rem;
+  }
+
+  button {
+    padding: 1.0625rem;
+  }
+
+
+.info {
+    padding-block: 0 2.5rem;       
+    padding-inline: 2.5rem;   
+  }
 }
