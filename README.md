@@ -12,6 +12,7 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Useful resources](#useful-resources)
+  - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
 
 ## Overview
@@ -30,25 +31,25 @@ Users should be able to:
 
 #### Base Designs
 * **Desktop View:**
-  ![Desktop View](./solution-desktop-design.png)
+  ![Desktop View](./solution-desktop-design.jpg)
 
 * **Mobile View:**
-  ![Mobile View](./solution-mobile-design.png)
+  ![Mobile View](./solution-mobile-design.jpg)
 
 #### Interactive & Active States
 * **Button Hover/Active State:**
-  ![Active Button Interaction](./active-states-active-button.png)
+  ![Active Button Interaction](./active-states-active-button.jpg)
 
 * **Form Validation - Empty Fields State:**
-  ![Empty Fields Error State](./solution-active-states-empty-fields.png)
+  ![Empty Fields Error State](./solution-active-states-empty-fields.jpg)
 
 * **Form Validation - Incorrect Email Format State:**
-  ![Incorrect Email Error State](./solution-active-states-incorrect-email.png)
+  ![Incorrect Email Error State](./solution-active-states-incorrect-email.jpg)
 
 ### Links
 
-- Solution URL: [Add your solution URL here](https://your-solution-url.com)
-- Live Site URL: [Github Page](https://jusnow1608.github.io/intro-component-with-signup-form-master-javascript/)
+- Solution URL: [Frontend Mentor Solution](https://your-solution-url.com)
+- Live Site URL: [Github Pages Live Preview](https://jusnow1608.github.io/intro-component-with-signup-form-master-javascript/)
 
 ## My process
 
@@ -76,12 +77,12 @@ body {
 }
 ```
 
-2. HTML5 Validation vs. Custom Script Conflicts (Ref: solution-active-states-incorrect-email.jpg)
+#### 2. HTML5 Validation vs. Custom Script Conflicts
 The Bug: Setting the HTML field type to type="email" allowed the browser's built-in validation rules to step in before my custom JavaScript ran. When users entered an invalid email syntax, the field returned a broken state, preventing the script from rendering the dynamic message change. The warning text remained stuck on "Email Address cannot be empty" instead of shifting to the proper contextual alert.
 
 The Solution: I redirected validation authority completely to standard JavaScript by checking value configurations inside sequential if / else if structures and implementing RegExp matching:
 
-JavaScript
+```js
 if (emailValue === '') {
     setErrorFor(email, "Email Address cannot be empty");
 } else if (!isEmail(emailValue)){
@@ -89,12 +90,14 @@ if (emailValue === '') {
 } else {
     setSuccessFor(email);
 }
-3. Error Icon Misalignment inside Dynamic Wrappers (Ref: solution-active-states-empty-fields.jpg)
+```
+
+#### 3. Error Icon Misalignment inside Dynamic Wrappers
 The Bug: Initially, generating the red exclamation points using an ::after pseudo-element on the .form-control block caused structural scaling issues. When validation errors occurred, the addition of the <small> message tag expanded the wrapper's vertical area. The absolute top: 50% calculation computed the height including the message text, which pulled the icon out of the input block and dragged it downward.
 
 The Solution: I completely abandoned absolute pseudo-element positioning on the text wrappers. Instead, I declared the error icon directly as a background element bound onto the input field itself, ensuring it calculates alignment exclusively relative to the input box borders. I combined this with CSS logical properties for structural localization:
 
-CSS
+```css
 .form-control.error input {
   border: 0.125rem solid var(--red400);
   background-image: url('images/icon-error.svg');
@@ -102,8 +105,21 @@ CSS
   background-position: right 1rem center;
   padding-inline-end: 3rem;
 }
-Useful resources
+```
+
+## Useful resources
 MDN Web Docs - CSS Logical Properties - This helped me master progressive styling concepts such as padding-inline-end to handle modern responsive structures and bidirectional design interfaces effortlessly.
 
-Author
-Frontend Mentor - @yourusername
+## AI Collaboration
+For this project, I collaborated with an AI assistant to streamline my debugging workflow and refine my CSS architecture. This partnership helped me:
+
+Refactor Layout Quirks: Brainstorm solutions for positioning error indicators when static elements disrupted form flow.
+
+Modernize CSS Syntax: Migrate traditional alignment rules over to modern CSS Logical Properties (e.g., swapping padding-right for padding-inline-end) to adhere to global accessibility benchmarks.
+
+Optimize Validation Flow: Isolate and eliminate subtle layout layout-clipping and browser engine validation conflicts quickly.
+
+## Author
+- GitHub - [@Jusnow1608](https://github.com/Jusnow1608)
+- Frontend Mentor - [@Jusnow1608](https://www.frontendmentor.io/profile/Jusnow1608)
+- LinkedIn - [@Justyna-Nowak-Szrajnert](https://www.linkedin.com/in/justyna-nowak-szrajnert-a5168713b/)
