@@ -69,12 +69,12 @@ body{
   margin-block-end: 1.5rem;
 }
 
-.offer-description{
+.offer-description {
   font-size: clamp(1rem, 0.5vw + 0.9rem, 1.0625rem);
   line-height: 1.7;
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,34 +83,27 @@ main{
   gap: 1.5625rem;
 }
 
-.costs{
+.costs {
   text-align: center;
   background-color: var(--purple700);
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 0 0 var(--costs-box-shadow);
-	-webkit-box-shadow: 0 0.5rem 0 0 var(--costs-box-shadow);
-	-moz-box-shadow: 0 0.5rem 0 0 var(--costs-box-shadow);
   padding: 1.25rem;
   width: 100%;
   max-width: 28.125rem;
   font-weight: 400;
 }
-.duration{
+.duration {
   font-weight: 600;
 }
 
-.submission{
+
+form {
   background-color: var(--white);
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 0 0 var(--form-box-shadow);
-	-webkit-box-shadow: 0 0.5rem 0 0 var(--form-box-shadow);
-	-moz-box-shadow: 0 0.5rem 0 0 var(--form-box-shadow);
   width: 100%;
   max-width: 28.125rem;
-}
-
-
-form{
   padding-block: 1.25rem 0.3125rem;
   padding-inline: 1.25rem;
   display: flex;
@@ -118,10 +111,9 @@ form{
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  width: 100%;
 }
 
-input{
+input {
   width:100%;
   padding:0.9375rem;
   border-radius: 0.3125rem;
@@ -137,10 +129,7 @@ input:focus {
   background-color: var(--white);
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 62.5rem var(--white) inset;
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus {
   box-shadow: 0 0 0 62.5rem var(--white) inset;
   -webkit-text-fill-color: var(--gray900);
 }
@@ -151,8 +140,6 @@ button{
   border-radius: 0.3125rem;
   border: none;
   box-shadow: 0 0.3125rem 0 0 var(--button-box-shadow-dark-green);
-	-webkit-box-shadow: 0 0.3125rem 0 0 var(--button-box-shadow-dark-green);
-	-moz-box-shadow: 0 0.3125rem 0 0 var(--button-box-shadow-dark-green);
   padding: 0.9375rem;
   text-transform: uppercase;
   letter-spacing: 0.0625rem;
@@ -193,7 +180,6 @@ button:hover{
   width: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
 .form-control .error-text {
@@ -273,7 +259,7 @@ main {
   }
 
 
-.costs, .submission {
+.costs, form {
     max-width: none; 
   }
 

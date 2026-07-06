@@ -50,17 +50,23 @@ function checkInputs() {
 
 function setErrorFor(input, message) {
     const formControl = input.parentElement;
-    const small = formControl.querySelector('small');
+    const small = formControl.querySelector('.error-text');
     
     small.innerText = message; 
-    formControl.className = 'form-control error';
+    formControl.classList.add('error');
+
+    input.setAttribute('aria-invalid', 'true');
 }
 
 function setSuccessFor(input) {
     const formControl = input.parentElement;
-    formControl.className = 'form-control';
-}
+    const small = formControl.querySelector('.error-text');
 
+    formControl.classList.remove('error');
+    if (small) small.innerText = '';
+
+    input.removeAttribute('aria-invalid');
+}
 function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
