@@ -40,6 +40,8 @@ body{
  background-image: url("images/bg-intro-mobile.png");
  background-color: var(--red400);
  color: var(--white);
+ padding-block: clamp(0rem, 4vw, 2rem);
+padding-inline: clamp(0rem, 8vw, 10rem);
 }
 
 .container{
@@ -48,25 +50,26 @@ body{
   justify-content: center;
   align-items: center;
   padding: clamp(0.9375rem, 3vw, 2rem);
-  gap: 1.875rem;  
+  gap: clamp(1.875rem, 5vw + 0.5rem, 4.5rem);  
 }
 
 .offer{
-  margin-block-start: 3.125rem;
+  margin-block-start: clamp(1.5rem, 5vh, 3.5rem);
   text-align: center;
   max-width: 28.125rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.9375rem;
-  gap: 1.25rem;  
+  padding: clamp(0rem, -2vw + 2rem, 1.5rem);
+  gap: clamp(1rem, 2vw, 1.5rem);
+  margin-block-start: clamp(0rem, -10vh + 5rem, 3.5rem);
 }
 
 .offer-title {
   font-size: clamp(1.75rem, 4vw + 1rem, 3.4375rem);
   line-height: 1.05;
-  margin-block-end: 1.5rem;
+  margin-block-end: clamp(1.5rem, 2vw + 1rem, 2.5rem);
 }
 
 .offer-description {
@@ -79,8 +82,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.9375rem;
-  gap: 1.5625rem;
+  padding: clamp(0.875rem, 2.5vw, 1.5rem);
+  gap: clamp(1.5rem, 0.5vw + 1.3rem, 1.5625rem);
 }
 
 .costs {
@@ -88,15 +91,16 @@ main {
   background-color: var(--purple700);
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 0 0 var(--costs-box-shadow);
-  padding: 1.25rem;
+  padding-block: clamp(1.0625rem, -0.5vw + 1.4rem, 1.25rem);
+  padding-inline: clamp(1.25rem, 2vw + 0.5rem, 2rem);
   width: 100%;
   max-width: 28.125rem;
   font-weight: 400;
+  font-size: clamp(0.9375rem, 0.5vw + 0.85rem, 1.0625rem);
 }
 .duration {
   font-weight: 600;
 }
-
 
 form {
   background-color: var(--white);
@@ -104,22 +108,23 @@ form {
   box-shadow: 0 0.5rem 0 0 var(--form-box-shadow);
   width: 100%;
   max-width: 28.125rem;
-  padding-block: 1.25rem 0.3125rem;
-  padding-inline: 1.25rem;
+  padding-block: clamp(1.25rem, 4vw + 0.5rem, 2.5rem) clamp(0.3125rem, 3vw - 0.5rem, 1.25rem);
+  padding-inline: clamp(1.25rem, 4vw + 0.5rem, 2.5rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: clamp(1rem, 1vw + 0.7rem, 1.25rem);
 }
 
 input {
   width:100%;
-  padding:0.9375rem;
+  padding-block: clamp(0.9375rem, 0.5vw + 0.8rem, 1.0625rem);
+  padding-inline: clamp(0.9375rem, 1vw + 0.6rem, 1.25rem);
   border-radius: 0.3125rem;
   border: 0.0625rem solid var(--input-border);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: clamp(1rem, 1vw, 1.1rem);
   }
 
 input:focus {
@@ -140,7 +145,7 @@ button{
   border-radius: 0.3125rem;
   border: none;
   box-shadow: 0 0.3125rem 0 0 var(--button-box-shadow-dark-green);
-  padding: 0.9375rem;
+  padding: clamp(0.9375rem, 0.5vw + 0.8rem, 1.0625rem);
   text-transform: uppercase;
   letter-spacing: 0.0625rem;
   width:100%;
@@ -156,9 +161,9 @@ button:hover{
 .info{
   text-align: center;
   color: var(--purple350);
-  font-size: 0.75rem;
-  padding-block: 0 1.25rem; 
-  padding-inline: 2rem;
+  font-size: clamp(0.75rem, 0.3vw + 0.65rem, 0.8rem);
+  padding-block: 0 clamp(1.25rem, 3vh + 0.5rem, 2.5rem);
+  padding-inline: clamp(2rem, 4vw + 0.5rem, 2.5rem);
   line-height: 2;
   font-weight: 500;
 }
@@ -168,7 +173,7 @@ button:hover{
 }
 
 .attribution { 
-  font-size: 0.6875rem; 
+  font-size: clamp(0.6875rem, 0.2vw + 0.6rem, 0.8rem);
   text-align: center; 
 }
 
@@ -184,10 +189,10 @@ button:hover{
 
 .form-control .error-text {
   color: var(--red400);
-  font-size: 0.6875rem;
+  font-size: clamp(0.6875rem, 0.2vw + 0.6rem, 0.8rem);
   font-weight: 500;
   text-align: right;
-  margin-block-start: 0.3125rem;
+  margin-block-start: clamp(0.25rem, 1vh, 0.5rem);
   display: none;
   font-style: italic;
 }
@@ -202,7 +207,7 @@ button:hover{
   background-image: url('images/icon-error.svg');
   background-repeat: no-repeat;
   background-position: right 1rem center;
-  padding-inline-end: 3rem;
+  padding-inline-end: clamp(2rem, 5vw, 3rem);
 }
 
 .form-control.error input::placeholder {
@@ -218,8 +223,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-block: 2rem;
-    padding-inline: clamp(1rem, 8vw, 10rem);
   }
 
 .container {
@@ -227,7 +230,6 @@ body {
   align-items: center;
   max-width: 90rem;
   width: 100%;
-  gap: 4.5rem;
   justify-content: space-between;
 }
 
@@ -238,53 +240,25 @@ body {
 
 .offer{
   text-align: left;
-  margin-block-start: 0;
   align-items: flex-start;
   max-width: none;
   flex: 1;
-  padding: 0;
 }
 
 .offer-description{
-line-height: 1.8;
+  line-height: 1.8;
 }
 
 main {
-    flex: 1; 
-    width: 100%;
-    align-items: stretch;
-    padding: 0;
-    gap: 1.5rem;
-    min-width: 24rem;
+  flex: 1; 
+  width: 100%;
+  align-items: stretch;
+  min-width: 24rem;
   }
 
 
 .costs, form {
-    max-width: none; 
+  max-width: none; 
   }
 
-.costs {
-  font-size: 1.0625rem;
-  padding-block: 1.0625rem;
-}
-
-form{
-  padding-block: 2.5rem 1.25rem;
-  padding-inline: 2.5rem;        
-  gap: 1.25rem;
-}
-
-input {
-    padding: 1.0625rem 1.25rem;
-  }
-
-  button {
-    padding: 1.0625rem;
-  }
-
-
-.info {
-    padding-block: 0 2.5rem;       
-    padding-inline: 2.5rem;   
-  }
 }
