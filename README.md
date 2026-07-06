@@ -34,7 +34,7 @@ Users should be able to:
   ![Desktop View](./solution/solution-desktop-design.jpg)
 
 * **Mobile View:**
-  ![Mobile View](./solution/solution-mobile-design.jpg)
+  <img src="./solution/solution-mobile-design.jpg" alt="Mobile View" height="800">
 
 #### Interactive & Active States
 * **Button Hover/Active State:**
