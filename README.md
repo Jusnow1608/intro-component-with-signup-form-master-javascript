@@ -31,20 +31,20 @@ Users should be able to:
 
 #### Base Designs
 * **Desktop View:**
-  ![Desktop View](./solution-desktop-design.jpg)
+  ![Desktop View](./solution/solution-desktop-design.jpg)
 
 * **Mobile View:**
-  ![Mobile View](./solution-mobile-design.jpg)
+  ![Mobile View](./solution/solution-mobile-design.jpg)
 
 #### Interactive & Active States
 * **Button Hover/Active State:**
-  ![Active Button Interaction](./active-states-active-button.jpg)
+  ![Active Button Interaction](./solution/solution-active-states-active-button.jpg)
 
 * **Form Validation - Empty Fields State:**
-  ![Empty Fields Error State](./solution-active-states-empty-fields.jpg)
+  ![Empty Fields Error State](./solution/solution-active-states-empty-fields.jpg)
 
 * **Form Validation - Incorrect Email Format State:**
-  ![Incorrect Email Error State](./solution-active-states-incorrect-email.jpg)
+  ![Incorrect Email Error State](./solution/solution-active-states-incorrect-email.jpg)
 
 ### Links
 
