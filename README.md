@@ -53,7 +53,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor Solution](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor Solution]([https://your-solution-url.com](https://www.frontendmentor.io/solutions/sign-up-form-with-custom-validation-bBLl7_dmtl))
 - Live Site URL: [Github Pages Live Preview](https://jusnow1608.github.io/intro-component-with-signup-form-master-javascript/)
 
 ## My process
